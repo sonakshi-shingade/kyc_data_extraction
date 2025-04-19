@@ -88,6 +88,7 @@ elif menu == "Upload Aadhaar":
             if res.ok and res_details.ok:
                 st.markdown(f"Name: **{res_details.json().get('Name')}**")
                 st.markdown(f"DOB: **{res_details.json().get('DOB')}**")
+                st.markdown(f"Gender: **{res_details.json().get('Gender')}**")
                 st.markdown(
                     f"Aadhaar No.: **{res_details.json().get('Aadhaar_Number')}**")
                 st.success(

@@ -23,7 +23,7 @@ class AadhaarCardDetails:
     def extract_text(self, file: Image) -> None:
         try:
             self.text = pytesseract.image_to_string(file)
-            print(self.text)  # Optional: For debugging
+            # print(self.text)  # Optional: For debugging
             logging.info("Text extracted successfully from image.")
 
         except Exception as e:
@@ -99,8 +99,7 @@ class AadhaarCardDetails:
                 "Name": self.get_name(),
                 "DOB": self.get_dob(),
                 "Gender": self.get_gender(),
-                "Aadhaar Number": self.get_aadhaar_number(),
-                "Father's Name": self.get_father_name()
+                "Aadhaar_Number": self.get_aadhaar_number()
             }
         except Exception as e:
             logging.error(f"Failed to get Aadhaar details: {e}")
@@ -108,6 +107,6 @@ class AadhaarCardDetails:
                 "Name": "",
                 "DOB": "",
                 "Gender": "",
-                "Aadhaar Number": "",
+                "Aadhaar_Number": "",
                 "Father's Name": ""
             }
